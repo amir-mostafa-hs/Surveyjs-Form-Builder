@@ -28,6 +28,27 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
+app.get("/api", (req, res) => {
+  res.json({
+    docs: [
+      {
+        title: "Forms API",
+        description: "Manage forms",
+        url: "/api/forms",
+      },
+      {
+        title: "Responses API",
+        description: "Manage form responses",
+        url: "/api/responses",
+      },
+    ],
+  });
+});
+
 // routes
 app.use("/api/forms", formsRouter);
 app.use("/api/responses", responsesRouter);
