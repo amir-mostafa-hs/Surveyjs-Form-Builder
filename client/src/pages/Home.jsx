@@ -24,7 +24,8 @@ function Home() {
             <Link to={`/form/${form.slug}`} target="_blank">
               لینک عمومی
             </Link>{" "}
-            — <Link to={`/responses/${form._id}`}>مشاهده پاسخ‌ها</Link>
+            — <Link to={`/responses/${form._id}`}>مشاهده پاسخ‌ها</Link> —{" "}
+            <Link to={`/builder/${form._id}`}>ویرایش فرم</Link>
           </li>
         ))}
       </ul>
