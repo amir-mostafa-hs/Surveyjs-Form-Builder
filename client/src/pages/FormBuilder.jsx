@@ -2,8 +2,14 @@ import React, { useState, useEffect } from "react";
 import { SurveyCreator, SurveyCreatorComponent } from "survey-creator-react";
 import "survey-core/survey-core.css";
 import "survey-creator-core/survey-creator-core.css";
+import "survey-core/survey.i18n";
+import "survey-creator-core/survey-creator-core.i18n";
 import { createForm, updateForm, getFormById } from "../api/forms";
 import { useNavigate, useParams, Link } from "react-router-dom";
+
+import SurveyCreatorTheme from "survey-creator-core/themes";
+import { registerCreatorTheme } from "survey-creator-core";
+registerCreatorTheme(SurveyCreatorTheme);
 
 function FormBuilder() {
   const navigate = useNavigate();
